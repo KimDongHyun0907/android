@@ -20,7 +20,6 @@ import java.io.IOException;
 public class MainActivity extends AppCompatActivity {
     EditText value;
     String FILENAME = "text.txt";
-    //String FILENAME = "text2.txt";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     File file = new File(getExternalFilesDir(null), FILENAME);
-                    //FileInputStream fis = new FileInputStream(file);
                     FileInputStream fis = openFileInput(FILENAME);
                     byte[] buffer = new byte[fis.available()];
                     fis.read(buffer);
@@ -54,13 +52,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try{
-//                    String state = Environment.getExternalStorageState();
-//                    if(state.equals(Environment.MEDIA_MOUNTED)){
-//                        File file = new File(getExternalFilesDir(null), FILENAME);
-//                        FileOutputStream fos = new FileOutputStream(file);
-//                        fos.write(value.getText().toString().getBytes());
-//                        fos.close();
-//                    }
                     FileOutputStream fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
                     fos.write(value.getText().toString().getBytes());
                 }catch (FileNotFoundException e) {
