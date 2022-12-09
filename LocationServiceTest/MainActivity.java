@@ -44,14 +44,4 @@ public class MainActivity extends AppCompatActivity {
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0,locationListener);
 
     }
-
-//    @Override
-//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-//    }
-//
-//    public void onClock(View view) {
-//        Uri uri = Uri.parse(String.format("geo:%f, %f?z=10",37.3,127.2));
-//        startActivity(new Intent(Intent.ACTION_VIEW,uri));
-//    }
 }
