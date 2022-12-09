@@ -106,10 +106,10 @@ public class MainActivity extends AppCompatActivity {
                 weatherList = weatherElement.getChildNodes();
                 s+="날씨=" + ((Node)weatherList.item(0)).getNodeValue()+"\n";
 
-//                NodeList wdList = element.getElementsByTagName("wdKor");
-//                Element wdElement = (Element) wdList.item(0);
-//                wdList = wdElement.getChildNodes();
-//                s+="바람=" + ((Node)wdList.item(0)).getNodeValue()+"\n";
+               NodeList wdList = element.getElementsByTagName("wdKor");
+               Element wdElement = (Element) wdList.item(0);
+               wdList = wdElement.getChildNodes();
+               s+="바람=" + ((Node)wdList.item(0)).getNodeValue()+"\n";
             }
             textView.setText(s);
         }
