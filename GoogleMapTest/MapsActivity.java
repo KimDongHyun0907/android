@@ -58,6 +58,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     LatLng lastlatlng = new LatLng(lastKnownLocation.getLatitude(), lastKnownLocation.getLongitude());
                     PolylineOptions options = new PolylineOptions().add(lastlatlng).add(newlatLng);
                     mMap.addPolyline(options);
+                    car.remove();
                 }
 
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(newlatLng,15));
