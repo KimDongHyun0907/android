@@ -15,7 +15,6 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_PERMISSION = 200;
     private static final int REQUEST_IMAGE_CAPTURE = 10;
-    private static String filename = "recorded.mp4";
 
     private String[] permissions = {Manifest.permission.CAMERA,
             Manifest.permission.READ_EXTERNAL_STORAGE,
